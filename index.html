@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Life As A Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- APP WRAPPER -->
+  <div id="app">
+
+    <!-- HEADER -->
+    <header id="app-header">
+      <div class="header-left">
+        <h1>🎮 Life As A Game</h1>
+        <p>Turn discipline into XP</p>
+      </div>
+
+      <div class="header-right">
+        <div class="user-info">
+          <span id="player-name">Player</span>
+          <span id="player-age">Age</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN DASHBOARD -->
+    <main id="dashboard">
+
+      <!-- LEFT PANEL -->
+      <section id="left-panel">
+
+        <!-- LEVEL CARD -->
+        <div class="card level-card">
+  <h2>Player Stats</h2>
+
+  <div class="stat-row">
+    <span>Level</span>
+    <strong id="level-value">0</strong>
+  </div>
+
+  <div class="stat-row">
+    <span>Total XP</span>
+    <strong id="xp-value">0 XP</strong>
+  </div>
+
+  <div class="xp-bar">
+    <div class="xp-fill" id="xp-fill"></div>
+  </div>
+</div>
+
+
+        <!-- STREAK CARD -->
+        <div class="card streak-card">
+  <h2>🔥 Streak</h2>
+  <p>Current Streak: <strong id="current-streak">0</strong> days</p>
+  <p>Best Streak: <strong id="best-streak">0</strong> days</p>
+</div>
+
+      </section>
+
+      <!-- CENTER PANEL -->
+      <section id="center-panel">
+
+        <!-- DAILY PROGRESS -->
+        <div class="card daily-progress">
+          <h2>Today’s Progress</h2>
+
+          <div class="progress-circle">
+            <span>65%</span>
+          </div>
+
+          <p>
+  <span id="tasks-completed">0</span> /
+  <span id="tasks-total">0</span>
+  tasks completed
+</p>
+
+        </div>
+
+<!-- TASK LIST -->
+<div class="card task-list-card">
+  <h2>Daily Tasks</h2>
+
+  <ul class="task-list">
+  <!-- Tasks are rendered by JavaScript -->
+</ul>
+
+  <!-- ADD TASK -->
+  <div class="add-task">
+    <input type="text" placeholder="Add new task">
+    <button>Add Task</button>
+  </div>
+</div>
+
+
+      </section>
+
+      <!-- RIGHT PANEL -->
+      <section id="right-panel">
+
+        <!-- WEEKLY OVERVIEW -->
+        <div class="card weekly-overview">
+          <h2>Weekly Overview</h2>
+
+          <div class="week-grid">
+  <div class="day-box" data-day="0">Mon</div>
+  <div class="day-box" data-day="1">Tue</div>
+  <div class="day-box" data-day="2">Wed</div>
+  <div class="day-box" data-day="3">Thu</div>
+  <div class="day-box" data-day="4">Fri</div>
+  <div class="day-box" data-day="5">Sat</div>
+  <div class="day-box" data-day="6">Sun</div>
+</div>
+        </div>
+
+        <!-- MONTHLY STATS -->
+        <div class="card monthly-stats">
+  <h2>Monthly Stats</h2>
+
+  <div class="stat-row">
+    <span>Total Tasks</span>
+    <strong id="month-total">0</strong>
+  </div>
+
+  <div class="stat-row">
+    <span>Completed</span>
+    <strong id="month-completed">0</strong>
+  </div>
+
+  <div class="stat-row">
+    <span>Success Rate</span>
+    <strong id="month-success">0%</strong>
+  </div>
+</div>
+
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="app-footer">
+      <div class="reset-timer">
+  🔄 New day in <span id="countdown">24:00:00</span>
+</div>
+
+<!-- FULL RESET BUTTON -->
+<button id="full-reset-btn" class="reset-all-btn">
+  🧨 Reset Everything
+</button>
+
+      <p>Discipline builds empires.</p>
+    </footer>
+  </div>
+
+<!-- PLAYER SETUP MODAL -->
+<div id="player-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>🎮 Start Your Game</h2>
+
+    <input id="player-name-input" type="text" placeholder="Enter your name" />
+    <input id="player-age-input" type="number" placeholder="Enter your age" />
+
+    <button id="start-game-btn">Start Game</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
